@@ -1,11 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, SafeAreaView, Alert, Button } from "react-native";
 
 export default function App() {
-  const handlePress = () => console.log("Text pressed");
+  const handlePress = () =>
+    Alert.alert("My title", "My Message", [
+      { text: "Yes", onPress: () => console.log("Yes") },
+      { text: "No", onPress: () => console.log("No") },
+    ]);
   return (
     <SafeAreaView style={styles.container}>
-      <Text onPress={handlePress}>Hello World</Text>
+      <Text>Hello World</Text>
+      <Button color="orange" title="Click me!" onPress={handlePress}></Button>
     </SafeAreaView>
   );
 }
