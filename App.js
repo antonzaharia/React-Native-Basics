@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, Alert, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  Alert,
+  Button,
+  View,
+  Dimentions,
+} from "react-native";
 
 export default function App() {
   const handlePress = () =>
@@ -9,8 +17,7 @@ export default function App() {
     ]);
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World</Text>
-      <Button color="orange" title="Click me!" onPress={handlePress}></Button>
+      <View style={styles.div}></View>
     </SafeAreaView>
   );
 }
@@ -18,8 +25,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "orange",
     justifyContent: "center",
     alignItems: "center",
+  },
+  div: {
+    backgroundColor: "dodgerblue",
+    width: "50%",
+    height: 70,
   },
 });
