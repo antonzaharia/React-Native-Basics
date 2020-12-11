@@ -1,5 +1,9 @@
 import React from "react";
 import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
+import {
   StyleSheet,
   Text,
   SafeAreaView,
@@ -10,6 +14,8 @@ import {
 } from "react-native";
 
 export default function App() {
+  const { landscape } = useDeviceOrientation();
+
   const handlePress = () =>
     Alert.alert("My title", "My Message", [
       { text: "Yes", onPress: () => console.log("Yes") },
@@ -32,6 +38,6 @@ const styles = StyleSheet.create({
   div: {
     backgroundColor: "dodgerblue",
     width: "50%",
-    height: 70,
+    height: landscape ? "100%" : "30%",
   },
 });
