@@ -7,7 +7,7 @@ import ViewImageScreen from "./app/screens/ViewImageScreen";
 export default function App() {
   const { landscape } = useDeviceOrientation();
 
-  return <ViewImageScreen />;
+  return <WelcomeScreen />;
 }
 const styles = StyleSheet.create({
   container: {
